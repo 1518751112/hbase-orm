@@ -1,0 +1,41 @@
+{
+  "name": "hbase-orm",
+  "version": "1.0.2",
+  "description": "hbase使用仿制sequelize方法创建表与添加字段。将列格式改成键值对格式。简单的使用",
+  "main": "./dist/index.js",
+  "scripts": {
+    "serve": "npm run dev",
+    "dev": "tsc",
+    "build": "tsc",
+    "test": "ts-node ./test/main.ts"
+  },
+  "dependencies": {
+    "@tg1518/hbase": "^0.6.21",
+    "dayjs": "^1.11.1",
+    "hbase-orm": "^1.0.1",
+    "lodash": "^4.17.21",
+    "nanoid": "^3.3.4"
+  },
+  "devDependencies": {
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1518751112/hbase-orm.git"
+  },
+  "keywords": [
+    "hbase",
+    "orm",
+    "ts"
+  ],
+  "author": "tg1518",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1518751112/hbase-orm/issues"
+  },
+  "homepage": "https://github.com/1518751112/hbase-orm#readme",
+  "files": [
+    "dist"
+  ]
+}
