@@ -49,7 +49,7 @@ app()
 
 ## 其他说明
 ### 连接成功有打印 失败会报错
-![](.\img\e46.png)1
+![](https://github.com/1518751112/hbase-orm/blob/main/img/e46.png?raw=true)
 ###注解
 
   | 注解名            | description      | description      |
