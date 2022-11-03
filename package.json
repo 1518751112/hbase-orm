@@ -1,6 +1,6 @@
 {
   "name": "hbase-orm",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "hbase使用仿制sequelize方法创建表与添加字段。将列格式改成键值对格式。简单的使用",
   "main": "./dist/index.js",
   "scripts": {
