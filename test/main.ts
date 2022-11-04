@@ -11,6 +11,8 @@ const app = async ()=> {
         isSyncTable:true, //是否自动创建表
     })
 
+    await HbaseService.forFeature([DeviceLog])
+
     setTimeout(()=>{
         const log = new DeviceLog();
         log.rowKey = "edd_test_key" //指定行key 也可以不添加随机生成

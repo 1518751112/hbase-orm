@@ -32,6 +32,9 @@ port:9021,
 namesPaces:"test", //指定命名空间
 isSyncTable:true, //是否自动创建表
 })
+  //初始化表 这个一定要添加不然会出问题
+  await HbaseService.forFeature([DeviceLog])
+
 // 这样也可以获取实例 HbaseService.getInstance()
     setTimeout(()=>{
         const log = new DeviceLog();
@@ -50,6 +53,7 @@ app()
 ## 其他说明
 ### 连接成功有打印 失败会报错
 ![](https://github.com/1518751112/hbase-orm/blob/main/img/e46.png?raw=true)
+
 ###注解
 
   | 注解名            | description      | description      |
@@ -65,6 +69,7 @@ app()
 | HbaseService.isExistTable           | 检测表是否存在           |
 | HbaseService.removeTable           | 移除表           |
 | HbaseService.getAllTable           | 获取指定命名空间的表           |
+| HbaseService.forFeature           | 初始表[在hbase连接后使用.一定要使用]           |
 | Model.create           | 插入数据           |
 | Model.findKey           | 查询单个数据           |
 | Model.findAll           | 查询多个数据           |
