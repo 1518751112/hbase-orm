@@ -185,8 +185,10 @@ export class HbaseModule<T> {
         const filters:any = [
             {
                 "op": "EQUAL",
-                "type": "RowFilter",
-                "comparator": {"value": `${rowKey || ""}.*`, "type": "RegexStringComparator"}
+                // "type": "RowFilter", // 行过滤器
+                "type": "PrefixFilter",
+                value: rowKey || "",
+                // "comparator": {"value": `${rowKey || ""}.*`, "type": "RegexStringComparator"} // 正则匹配 速度慢
             }
         ]
         // @ts-ignore
@@ -281,8 +283,10 @@ export class HbaseModule<T> {
         const filters:any = [
             {
                 "op": "EQUAL",
-                "type": "RowFilter",
-                "comparator": {"value": `${rowKey || ""}.*`, "type": "RegexStringComparator"}
+                "type": "PrefixFilter",
+                value: rowKey || "",
+                // "type": "RowFilter",
+                // "comparator": {"value": `${rowKey || ""}.*`, "type": "RegexStringComparator"}
             }
         ]
 
